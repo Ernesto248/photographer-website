@@ -22,7 +22,7 @@ import { motion } from "framer-motion";
 const portfolioItems = [
   {
     id: 1,
-    src: "/romantic-wedding-moment.png",
+    src: "https://lf9ta072ri0w9ubt.public.blob.vercel-storage.com/images/romantic-wedding-moment.png",
     alt: "Romantic wedding moment in garden",
     category: "weddings",
     title: "Garden Romance",
@@ -30,7 +30,7 @@ const portfolioItems = [
   },
   {
     id: 2,
-    src: "/celebration-party.png",
+    src: "https://lf9ta072ri0w9ubt.public.blob.vercel-storage.com/images/celebration-party.png",
     alt: "Wedding celebration party",
     category: "events",
     title: "Evening Celebration",
@@ -38,7 +38,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    src: "/outdoor-family-portrait.png",
+    src: "https://lf9ta072ri0w9ubt.public.blob.vercel-storage.com/images/outdoor-family-portrait.png",
     alt: "Outdoor family portrait in park",
     category: "portraits",
     title: "Family in the Park",

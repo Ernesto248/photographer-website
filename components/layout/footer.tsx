@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Camera, Instagram, Facebook, Mail, Phone } from "lucide-react"
+import Link from "next/link";
+import { Camera, Instagram, Facebook, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,7 +12,9 @@ export function Footer() {
               <Camera className="h-8 w-8" />
               <span className="font-bold text-xl">PhotoStudio</span>
             </Link>
-            <p className="text-muted-foreground text-sm">Capturing unique moments with passion and professionalism.</p>
+            <p className="text-muted-foreground text-sm">
+              Capturing unique moments with passion and professionalism.
+            </p>
           </div>
 
           {/* Navigation */}
@@ -20,22 +22,42 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/portfolio"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/services"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -45,11 +67,39 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Wedding Photography</li>
-              <li>Portrait Sessions</li>
-              <li>Corporate Photography</li>
-              <li>Special Events</li>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Wedding Photography
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Portrait Sessions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Corporate Photography
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Special Events
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -67,10 +117,16 @@ export function Footer() {
               </div>
             </div>
             <div className="flex space-x-4 mt-4">
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </Link>
             </div>
@@ -82,5 +138,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

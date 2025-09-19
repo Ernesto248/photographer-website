@@ -164,7 +164,7 @@ export function Hero() {
                 }}
               />
               <MotionImage
-                src="/portrait-studio-setup.png"
+                src="/profile.jpg"
                 alt="Professional photography studio setup"
                 width={600}
                 height={800}

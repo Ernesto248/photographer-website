@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-2xl blur-xl" />
               <Image
-                src="/portrait-studio-setup.png"
+                src="/profile.jpg"
                 alt="Sarah Mitchell - Professional Photographer"
                 width={600}
                 height={800}

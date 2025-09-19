@@ -1,47 +1,48 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X, Camera } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Camera } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsMenuOpen(false)
-    }
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
 
     if (isMenuOpen) {
-      document.addEventListener("keydown", handleEscape)
-      document.body.style.overflow = "hidden" // Prevent background scroll
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden"; // Prevent background scroll
     } else {
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape)
-      document.body.style.overflow = "unset"
-    }
-  }, [isMenuOpen])
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
     <motion.header
@@ -67,8 +68,15 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <motion.div key={item.name} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href={item.href} className="text-foreground/80 hover:text-foreground transition-colors">
+              <motion.div
+                key={item.name}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href={item.href}
+                  className="text-foreground/80 hover:text-foreground transition-colors"
+                >
                   {item.name}
                 </Link>
               </motion.div>
@@ -82,7 +90,10 @@ export function Header() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <motion.div whileTap={{ scale: 0.9 }} transition={{ duration: 0.1 }}>
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.1 }}
+            >
               <Button
                 variant="ghost"
                 size="icon"
@@ -163,7 +174,10 @@ export function Header() {
                     transition={{ duration: 0.3, delay: 0.4 }}
                   >
                     <Button asChild className="w-full py-3 text-lg" size="lg">
-                      <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                      <Link
+                        href="/contact"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
                         Book Session
                       </Link>
                     </Button>
@@ -175,5 +189,5 @@ export function Header() {
         </AnimatePresence>
       </nav>
     </motion.header>
-  )
+  );
 }
